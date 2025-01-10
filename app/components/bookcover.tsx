@@ -1,12 +1,10 @@
 import type { MetaFunction } from "@remix-run/node";
-import bookcoverStyles from "../components/css/bookcover.scss";
+import '~/styles/bookcover.css'
 
 export const meta: MetaFunction = () => {
   return [
     { title: "mementa.blog" },
     { name: "Mementa.blog", content: "Welcome to my place on the internet" },
-    { rel: "stylesheet", href: bookcoverStyles },
-
   ];
 };
 
@@ -20,6 +18,7 @@ export default function Index() {
                 <a href='about'
                      target="_blank"
                      rel="noreferrer">
+                      
                 
                     <h1 className="title">
                         Mementa
@@ -35,8 +34,9 @@ export default function Index() {
                      href={href}
                      target="_blank"
                      rel="noreferrer"
+                     key={href}
                      >
-                        <li key={href} className="navlistitem">
+                        <li  className="navlistitem">
                         
                             {text}
                         </li>
